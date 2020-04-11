@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+Product page
+{% endblock %}
+
+{% block content %}
+<ul class="container">
+    <div class="row">
+    {% for product in products %}
+        <li class="col-3 offset-1">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product }}</h5>
+                    <p class="card-text">Short product presentation</p>
+                    <a href="#" class="btn btn-primary">See details</a>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+    </div>
+</ul>
+{% endblock %}
